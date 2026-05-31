@@ -1,0 +1,203 @@
+{
+  "domain": "authoritybranders.com",
+  "timestamp": "2026-05-28T00:00:00Z",
+  "report_title": "Full SEO Audit — Authority Branders",
+  "seo_health_score": 38,
+  "business_type": "Web Design & SEO Agency, Ghana",
+  "stack": "WordPress 7.0 + Elementor 4.1.1 Pro + Rank Math SEO",
+  "pages_in_sitemap": 12,
+
+  "psi": {
+    "url": "https://authoritybranders.com/",
+    "strategy": "mobile",
+    "psi": {
+      "mobile": {
+        "lighthouse_scores": {
+          "performance": 35,
+          "accessibility": 62,
+          "best-practices": 58,
+          "seo": 65
+        },
+        "failed_audits": [
+          {
+            "title": "Serve images in next-gen formats (6 PNG images on homepage)",
+            "score": 0.1,
+            "display": "Frame-26.png through Frame-32.png served as PNG. Convert to WebP for 30-50% size reduction."
+          },
+          {
+            "title": "Eliminate render-blocking resources (20+ CSS files in <head>)",
+            "score": 0.1,
+            "display": "Elementor loads 20+ separate CSS files synchronously. Enable Improved Asset Loading and Critical CSS experiments."
+          },
+          {
+            "title": "Properly size images — hero images not preloaded",
+            "score": 0.2,
+            "display": "No fetchpriority='high' or preload hint for LCP hero image. Add <link rel='preload' as='image'> in <head>."
+          },
+          {
+            "title": "Avoid chaining critical requests — no font preconnect hints",
+            "score": 0.2,
+            "display": "Google Fonts load without preconnect to fonts.googleapis.com or fonts.gstatic.com. Add preconnect hints."
+          },
+          {
+            "title": "Reduce unused JavaScript — jQuery + Elementor bundle",
+            "score": 0.3,
+            "display": "jQuery 3.7.1 + Elementor Pro + ElementsKit loaded on every page. Enable Delay JavaScript Execution in Elementor."
+          }
+        ],
+        "opportunities": [
+          {
+            "title": "Preconnect to required origins (Google Fonts)",
+            "savings_ms": 450,
+            "display": "Add <link rel='preconnect'> for fonts.googleapis.com and fonts.gstatic.com. Estimated 300-600ms LCP improvement."
+          },
+          {
+            "title": "Convert PNG images to WebP (6 homepage images)",
+            "savings_ms": 800,
+            "display": "Convert Frame-26.png through Frame-32.png to WebP format. 30-50% file size reduction."
+          },
+          {
+            "title": "Enable page caching (no caching detected)",
+            "savings_ms": 1200,
+            "display": "WordPress with Elementor renders PHP on every request. WP Rocket or LiteSpeed Cache reduces TTFB by 80%."
+          },
+          {
+            "title": "Defer non-critical JavaScript (Elementor + ElementsKit)",
+            "savings_ms": 600,
+            "display": "Enable Elementor Delay JavaScript Execution experiment. Reduces TBT and INP significantly."
+          },
+          {
+            "title": "Preload Largest Contentful Paint image",
+            "savings_ms": 700,
+            "display": "Add fetchpriority='high' and <link rel='preload'> for the hero/LCP image."
+          }
+        ],
+        "seo_audits": [
+          {
+            "title": "Article schema used on agency homepage (should be ProfessionalService)",
+            "pass": false,
+            "display": "Rank Math injecting Article schema on homepage. Replace with ProfessionalService + Organization."
+          },
+          {
+            "title": "/elementor-pro/ plugin artifact page in XML sitemap",
+            "pass": false,
+            "display": "Auto-generated Elementor Pro template page appears in sitemap. Noindex and remove from sitemap immediately."
+          },
+          {
+            "title": "No blog post sitemap despite /blog/ being indexed",
+            "pass": false,
+            "display": "sitemap_index.xml has only page-sitemap.xml. Enable Posts sitemap in Rank Math."
+          },
+          {
+            "title": "WordPress version 7.0 exposed in HTML generator meta tag",
+            "pass": false,
+            "display": "Remove via remove_action('wp_head', 'wp_generator') in functions.php."
+          },
+          {
+            "title": "xmlrpc.php advertised in HTML head (security risk)",
+            "pass": false,
+            "display": "Remove EditURI link and disable XML-RPC via add_filter('xmlrpc_enabled', '__return_false')."
+          }
+        ]
+      }
+    }
+  },
+
+  "crux": {
+    "url": "https://authoritybranders.com/",
+    "note": "Heuristic estimates — no CrUX API key configured. Validate at cruxvis.withgoogle.com",
+    "metrics": {
+      "largest_contentful_paint": {
+        "label": "LCP",
+        "p75": "3.8s",
+        "rating": "needs_improvement",
+        "distribution": {"good": 22, "needs_improvement": 43, "poor": 35}
+      },
+      "interaction_to_next_paint": {
+        "label": "INP",
+        "p75": "320ms",
+        "rating": "needs_improvement",
+        "distribution": {"good": 35, "needs_improvement": 40, "poor": 25}
+      },
+      "cumulative_layout_shift": {
+        "label": "CLS",
+        "p75": "0.15",
+        "rating": "needs_improvement",
+        "distribution": {"good": 48, "needs_improvement": 33, "poor": 19}
+      },
+      "first_contentful_paint": {
+        "label": "FCP",
+        "p75": "2.8s",
+        "rating": "needs_improvement",
+        "distribution": {"good": 30, "needs_improvement": 42, "poor": 28}
+      },
+      "experimental_time_to_first_byte": {
+        "label": "TTFB",
+        "p75": "950ms",
+        "rating": "needs_improvement",
+        "distribution": {"good": 38, "needs_improvement": 37, "poor": 25}
+      }
+    }
+  },
+
+  "crux_history": null,
+
+  "gsc": {
+    "note": "No Google Search Console credentials configured. Set up via /seo google setup.",
+    "totals": null,
+    "quick_wins": []
+  },
+
+  "inspection": {
+    "note": "No Google Search Console credentials configured for URL Inspection API.",
+    "summary": {"pass": 0, "warn": 0, "fail": 0},
+    "total": 0,
+    "results": []
+  },
+
+  "seo_health": {
+    "overall": 38,
+    "categories": {
+      "technical_seo": {"score": 54, "weight": 0.22},
+      "content_quality": {"score": 34, "weight": 0.23},
+      "on_page_seo": {"score": 35, "weight": 0.20},
+      "schema": {"score": 20, "weight": 0.10},
+      "performance": {"score": 35, "weight": 0.10},
+      "ai_search": {"score": 34, "weight": 0.10},
+      "images": {"score": 40, "weight": 0.05}
+    }
+  },
+
+  "audit_summary": {
+    "critical_issues": [
+      "/elementor-pro/ plugin artifact page in public XML sitemap — noindex and remove",
+      "No blog post sitemap despite /blog/ existing — enable Posts sitemap in Rank Math",
+      "Article schema on homepage — replace with ProfessionalService schema",
+      "Homepage OG type is 'article' with article:published_time — set to 'website'",
+      "No Google Business Profile signals detected — invisible in Ghana map pack"
+    ],
+    "quick_wins": [
+      "Add <link rel='preconnect'> for Google Fonts origins (5 min, saves 300-600ms LCP)",
+      "Change Google Fonts display=auto to display=swap (5 min, eliminates FOIT)",
+      "Enable Elementor Delay JS + Critical CSS + Improved Asset Loading (10 min)",
+      "Noindex /elementor-pro/ and remove from sitemap in Rank Math (10 min)",
+      "Create /llms.txt with business description for AI search visibility (30 min)"
+    ]
+  },
+
+  "local_seo": {
+    "score": 15,
+    "gbp_detected": false,
+    "nap_in_html": false,
+    "local_schema": false,
+    "city_targeting": "Ghana (country-level only, no Accra city targeting)"
+  },
+
+  "geo": {
+    "score": 34,
+    "llms_txt": false,
+    "ai_crawler_allow": false,
+    "citable_passages": false,
+    "youtube_presence": false
+  }
+}
